@@ -7,6 +7,11 @@ namespace ImageProcessing.Core
 {
     public static class Image
     {
+        public static IImage<T> Create<T>(int width, int height) where T : IPixel
+        {
+            throw new NotImplementedException();
+        }
+
         public static IImage<T> FromFile<T>(string filename) where T : IPixel {
             var bitmap = new Bitmap(filename);
             var pixelType = typeof (T);
